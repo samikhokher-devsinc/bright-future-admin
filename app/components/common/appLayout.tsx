@@ -174,9 +174,10 @@ const App: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               items={items}
               style={{
                 backgroundColor: '#094E85',
-                fontSize: '15px',
+                fontSize: '16px',
                 fontWeight: 600,
               }}
+              className="custom-menu"
             />
           </div>
         </Sider>

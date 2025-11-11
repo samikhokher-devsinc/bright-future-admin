@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Dropdown, Space } from 'antd';
+import { Dropdown } from 'antd';
 import Image from 'next/image';
 
 interface DropdownMenuProps {
@@ -12,30 +13,33 @@ interface DropdownMenuProps {
 }
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ imageSrc, imageAlt, label, menuItems }) => (
-  <div className='flex items-center bg-white border border-gray-200 rounded-full px-3 hover:bg-gray-50 shadow-sm transition-all h-[40px]'>
-    <Dropdown menu={{ items: menuItems }}
-      trigger={['click']}>
-      <a onClick={e => e.preventDefault()} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-        <Space align="center" style={{ color: "black", gap: '12px' }}>
-          {imageSrc && (
-            <div style={{ width: '32px', height: '32px', position: 'relative' }}>
-              <Image
-                src={imageSrc}
-                alt={imageAlt || 'dropdown image'}
-                fill
-                style={{
-                  borderRadius: '50%',
-                  objectFit: 'cover'
-                }}
-              />
-            </div>
-          )}
-          <span style={{  fontWeight: 500 }} className='text-[11px] md:text-[15px]'>{label}</span>
-          <DownOutlined style={{ fontSize: '12px' }} />
-        </Space>
-      </a>
-    </Dropdown>
-  </div>
+  <Dropdown
+    menu={{ items: menuItems }}
+    trigger={['click']}
+  >
+    <div>
+      <button
+        onClick={(e) => e.preventDefault()}
+        className='flex items-center gap-3 bg-white border border-gray-200 rounded-full px-3 hover:bg-gray-50 shadow-sm transition-all h-[40px] cursor-pointer'
+      >
+        {imageSrc && (
+          <div className="relative w-8 h-8">
+            <Image
+              src={imageSrc}
+              alt={imageAlt || 'dropdown image'}
+              fill
+              style={{
+                borderRadius: '50%',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+        )}
+        <span className='text-[11px] md:text-[15px] font-medium text-black'>{label}</span>
+        <DownOutlined className="text-xs text-black" />
+      </button>
+    </div>
+  </Dropdown>
 );
 
 export default DropdownMenu;

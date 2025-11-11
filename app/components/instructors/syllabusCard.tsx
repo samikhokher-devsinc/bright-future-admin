@@ -2,10 +2,8 @@ import CommonPieChart from "../common/pieChart";
 
 const SyllabusCard = () => {
     const chartData = [
-        { name: 'Sales', value: 450 },
-        { name: 'Marketing', value: 300 },
-        { name: 'Support', value: 200 },
-        { name: 'Development', value: 150 },
+        { name: 'Completed', value: 950 },
+        { name: 'Pending', value: 50 },
     ];
     const chartColors = ['#094E85', '#EF476F'];
     return (

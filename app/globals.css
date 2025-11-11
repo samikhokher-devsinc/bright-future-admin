@@ -37,3 +37,9 @@ body {
   color: #fff !important;
 }
 
+
+/* in your global CSS or module */
+.custom-menu .ant-menu-item {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}

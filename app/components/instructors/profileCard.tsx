@@ -16,7 +16,7 @@ const ProfileCard = () => {
     courses: ['1-A', '2-A'],
   };
     return (
-        <div className="flex p-3 md:p-0 flex-row items-center justify-between text-white bg-[#094E85] rounded-sm h-full">
+        <div className="flex p-3 md:p-0 flex-row items-center justify-between text-white bg-[#00223d] rounded-sm h-full">
             <div className="flex flex-row  md:items-center">
                 <Image
                     src="/images/avatar.jpeg"
@@ -37,7 +37,7 @@ const ProfileCard = () => {
                 </div>
             </div>
 
-            <button className="bg-[#0564b1] font-bold text-white border border-[#0564b1] rounded-md px-3 py-2 m-2 sm:m-4 hover:bg-blue-50 hover:text-[#0564b1]">
+            <button className="bg-[#023d6c] font-bold text-white border border-[#023d6c] rounded-md px-3 py-2 m-2 sm:m-4 hover:bg-blue-50 hover:text-[#0564b1]">
                 Edit Profile
             </button>
         </div>
