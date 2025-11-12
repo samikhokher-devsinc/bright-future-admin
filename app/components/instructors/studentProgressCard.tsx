@@ -32,13 +32,13 @@ const StudentProgressCard = () => {
     ];
     return (
         <div>
-            <div className="p-4 flex flex-col md:flex-row md:justify-between items-center  gap-3 border-b border-gray-300 pb-4">
-                <h1 className="text-lg font-bold">Recently Joined</h1>
+            <div className="p-2 md:p-4 flex flex-col md:flex-row md:justify-between items-center  gap-3 border-b border-gray-300 pb-4 overflow-hidden">
+                <h1 className="text-lg font-bold">Student Progress</h1>
                 <DropdownMenu label="Last 7 days" menuItems={timeMenu} />
             </div>
-            <ul className="p-3">
+            <ul className="p-3 max-h-[400px] overflow-y-auto">
                 {studentProgress.map((student, index) => ( 
-                    <li key={index} className="mb-4 last:mb-0 border border-gray-200 p-2 rounded-sm">
+                    <li key={index} className="mb-2 md:mb-4 last:mb-0 border border-gray-200 p-2 rounded-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h2 className="text-sm font-semibold">{student.studentName}</h2>

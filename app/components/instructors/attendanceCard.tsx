@@ -28,7 +28,7 @@ const AttendanceCard = () => {
   return (
     <div>
       <div className="p-4 flex flex-col md:flex-row md:justify-between items-center mb-6 gap-3 border-b border-gray-300 pb-4">
-        <h1 className="text-lg font-bold">Recently Joined</h1>
+        <h1 className="text-lg font-bold">Attendance</h1>
         <DropdownMenu label="Last 7 days" menuItems={timeMenu} />
       </div>
       <div className='px-4 py-1'>
