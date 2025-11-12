@@ -65,7 +65,7 @@ const SchedulesCard = () => {
             </div>
             <div className="p-3">
                 <h1 className="text-lg font-bold mb-5">Upcoming Events</h1>
-                <ul className="flex flex-col max-h-[360px] overflow-y-auto">
+                <ul className="flex flex-col max-h-[390px] overflow-y-auto">
                     {UpComingEventsData.map((event, index) => (
                         <li
                             key={index}
